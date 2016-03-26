@@ -12,7 +12,7 @@
 # 	app.run(debug=True)
 
 import sys
-import config
+import visual
 
 def main():
 	if len(sys.argv) != 3:
@@ -22,7 +22,7 @@ def main():
 	option = sys.argv[1]
 	img_url = sys.argv[2]
 
-	config.find_tags(img_url)
+	visual.get_tags(img_url)
 
 
 if __name__ == '__main__':
