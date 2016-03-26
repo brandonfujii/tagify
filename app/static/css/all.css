@@ -1,0 +1,111 @@
+body {
+  background: #fafafa; }
+  body nav {
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px; }
+    body nav ul {
+      padding: 20px;
+      margin: 0; }
+      body nav ul li {
+        display: inline-block; }
+        body nav ul li a {
+          font-family: 'Proxima Nova', 'Helvetica', Arial, sans-serif;
+          font-size: 1em;
+          font-weight: 700;
+          color: #1A8BB3; }
+  body h1 {
+    font-family: 'Proxima Nova', 'Helvetica', Arial, sans-serif;
+    font-size: 2em;
+    font-weight: 300;
+    color: #555555;
+    text-align: center; }
+    body h2 {
+      max-width: 400px;
+      margin: 0 auto;
+      font-family: 'Proxima Nova', 'Helvetica', Arial, sans-serif;
+      font-size: 1em;
+      font-weight: 300;
+      color: #555555;
+      line-height: 1.5em; }
+      body .container form {
+        margin-top: 20px;
+        text-align: center; }
+        body .container form input#imageurl {
+          padding: 20px;
+          height: 50px;
+          border: 0; }
+          body .container form input#imageurl:focus {
+            border: 1px solid #1A8BB3;
+            outline: none; }
+        body .container form input[type="submit"] {
+          -webkit-transition: ease-in-out 0.3s;
+          -moz-transition: ease-in-out 0.3s;
+          -o-transition: ease-in-out 0.3s;
+          transition: ease-in-out 0.3s;
+          font-family: 'Proxima Nova', 'Helvetica', Arial, sans-serif;
+          font-size: 1.2em;
+          font-weight: 500;
+          color: #1A8BB3;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          background: transparent;
+          border: 2px solid #1A8BB3;
+          padding: 7px 15px 5px 15px;
+          border-radius: 50px; }
+          body .container form input[type="submit"]:focus {
+            outline: none; }
+            body .container form input[type="submit"]:hover {
+              background: #1A8BB3;
+              color: #fff; }
+      body .container .results {
+        max-width: 400px;
+        margin: 30px auto;
+        border-radius: 3px;
+        border: 1px solid #f2f2f2;
+        overflow: hidden; }
+        body .container .results .image img {
+          width: 100%;
+          height: auto; }
+        body .container .results .tags {
+          text-align: center;
+          padding: 20px;
+          background: #fff;
+          margin-bottom: 0; }
+          body .container .results .tags .tag {
+            -webkit-transition: ease-in-out 0.3s;
+            -moz-transition: ease-in-out 0.3s;
+            -o-transition: ease-in-out 0.3s;
+            transition: ease-in-out 0.3s;
+            position: relative;
+            display: inline-block;
+            background-color: #fafafa;
+            border: 1px solid #E4E4E4;
+            border-radius: 5px;
+            box-shadow: 0 1px 1px #E0E0E0;
+            min-width: inherit;
+            margin: 10px;
+            font-size: 12px;
+            padding-left: 7px;
+            padding-right: 7px; }
+            body .container .results .tags .tag:hover {
+              box-shadow: 1px 2px 2px #E0E0E0; }
+              body .container .results .tags .tag:hover .val-hidden {
+                display: block; }
+                body .container .results .tags .tag p {
+                  text-align: center;
+                  margin: 0;
+                  padding: 0; }
+                  body .container .results .tags .tag .val-hidden {
+                    font-family: 'Proxima Nova', 'Helvetica', Arial, sans-serif;
+                    font-size: 1em;
+                    font-weight: 500;
+                    color: #fff;
+                    border-radius: 5px;
+                    padding: 5px 7px 3px 7px;
+                    background: #000;
+                    position: absolute;
+                    top: -175%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    display: none; }

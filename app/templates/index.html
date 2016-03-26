@@ -1,32 +1,28 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>Tagify: Describe your photo</h1>
-    {% with messages = get_flashed_messages() %}
-      {% if messages %}
-        <ul>
-        {% for message in messages %}
-            <li>{{ message }} </li>
-        {% endfor %}
-        </ul>
-      {% endif %}
-    {% endwith %}
-    <form action="" method="post" name="imageform">
-    	{{ form.hidden_tag() }}
-    	<p>{{ form.imageurl(size=80) }}</p>
-    	{% for error in form.imageurl.errors %}
-        	<span style="color: red;">[{{ error }}]</span>
-        {% endfor %}<br>
-    	<p><input type="submit" value="Submit"></p>
-    </form>
-    <div class="image">
-    	<img src="{{img}}" alt="">
-    </div>
-    <table>
-	    {% for key, value in tags.iteritems() %}
-	    	<tr>
-	        	<th> {{ key }} </th>
-	        	<td> {{ value }} </td>
-	   		</tr>
-	   	{% endfor %}
-   	</table>
+	<div class="container">
+	    <form action="" method="post" name="imageform">
+	    	{{ form.hidden_tag() }}
+	    	<p>{{ form.imageurl(size=80) }}</p>
+	    	{% for error in form.imageurl.errors %}
+	        	<span style="color: red;">[{{ error }}]</span>
+	        {% endfor %}<br>
+	    	<p><input type="submit" value="Get Tags"></p>
+	    </form>
+	    <div class="results">
+		    <div class="image">
+		    	<img src="{{img}}" alt="">
+		    </div>
+		    <ul class="tags">
+			    {% for key, value in tags.iteritems() %}
+			    	<li class="tag">
+			        	<p> {{ key }} </p>
+			        	<div class="val-hidden"> 
+			        		<p> {{ value }} </p>
+			        	</div>
+			   		</li>
+			   	{% endfor %}
+		   	</ul>
+		</div>
+	</div>
 {% endblock %}

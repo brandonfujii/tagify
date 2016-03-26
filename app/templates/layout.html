@@ -5,10 +5,21 @@
     {% else %}
     <title>Tagify!</title>
     {% endif %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    {% assets "scss_all" %}
+      <link rel=stylesheet type=text/css href="{{ ASSET_URL }}">
+    {% endassets %}
   </head>
   <body>
-    <nav><a href="/index">Home</a></nav>
-    <hr>
+    <nav>
+      <ul>
+        <li>
+          <a href="/index">Go back</a>
+        </li>
+      </ul>
+    </nav>
+    <h1>Tagify: Visual Recognition Tagging</h1>
+    <h2>2lazy2tag? Enter in an image url and get tags that describe your photo. Hover over the tags to see the probability that the tag is valid.</h2>
     {% with messages = get_flashed_messages() %}
       {% if messages %}
         <ul>
