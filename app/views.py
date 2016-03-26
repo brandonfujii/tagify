@@ -4,5 +4,6 @@ from visual import *
 
 @app.route('/')
 def index():
-	tag_class_dict = get_tags('http://vignette1.wikia.nocookie.net/joke-battles/images/4/40/18360-doge-doge-simple.jpg/revision/latest?cb=20151209161638')
-	return render_template('index.html', tags=tag_class_dict)
+	img_url = 'http://vignette1.wikia.nocookie.net/joke-battles/images/4/40/18360-doge-doge-simple.jpg/revision/latest?cb=20151209161638'
+	tags_dict = get_tags(img_url)
+	return render_template('index.html', tags=tags_dict, img=img_url)

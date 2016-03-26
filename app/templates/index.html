@@ -1,6 +1,9 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>Hello, world</h1>
+    <h1>Tagify: Describe your photo</h1>
+    <div class="image">
+    	<img src="{{img}}" alt="">
+    </div>
     <table>
 	    {% for key, value in tags.iteritems() %}
 	    	<tr>
