@@ -1,18 +1,8 @@
 #!/usr/bin/python
 
-# from flask import Flask
-# app = Flask(__name__)
-
-# @app.route('/')
-# def index():
-# 	return "Index page"
-
-
-# if __name__ == '__main__':
-# 	app.run(debug=True)
 
 import sys
-import visual
+from app.visual import *
 
 def main():
 	if len(sys.argv) != 3:
@@ -22,8 +12,9 @@ def main():
 	option = sys.argv[1]
 	img_url = sys.argv[2]
 
-	visual.get_tags(img_url)
-
+	new_dict = get_tags(img_url)
+	print new_dict
+	
 
 if __name__ == '__main__':
   main()

@@ -1,4 +1,12 @@
 {% extends "layout.html" %}
 {% block content %}
     <h1>Hello, world</h1>
+    <table>
+	    {% for key, value in tags.iteritems() %}
+	    	<tr>
+	        	<th> {{ key }} </th>
+	        	<td> {{ value }} </td>
+	   		</tr>
+	   	{% endfor %}
+   	</table>
 {% endblock %}
