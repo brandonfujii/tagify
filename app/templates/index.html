@@ -17,12 +17,14 @@
 		    	<img src="{{img}}" alt="">
 		    </div>
 		    <ul class="tags">
-			    {% for key, value in tags.iteritems() %}
-			    	<li class="tag">
-			        	<p> {{ key }} </p>
-			        	<div class="val-hidden"> 
-			        		<p> {{ value }} </p>
-			        	</div>
+			   	{% for tag in tags %}
+			   		<li class="tag">
+			   			<p>
+			   				{{ tag.0 }}
+			   			</p>
+			   			<div class="val-hidden">
+			   				<p> {{ tag.1 }} </p>
+			   			</div>
 			   		</li>
 			   	{% endfor %}
 		   	</ul>
