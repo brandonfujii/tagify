@@ -5,6 +5,7 @@
     {% else %}
     <title>Tagify!</title>
     {% endif %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     {% assets "scss_all" %}
       <link rel=stylesheet type=text/css href="{{ ASSET_URL }}">
@@ -14,12 +15,12 @@
     <nav>
       <ul>
         <li>
-          <a href="/index">Go back</a>
+          <a href="http://brandonfujii.com">Made by brandonfujii</a>
         </li>
       </ul>
     </nav>
     <h1>Tagify: Visual Recognition Tagging</h1>
-    <h2>2lazy2tag? Enter in an image url and get tags that describe your photo. Hover over the tags to see the probability that the tag is valid.</h2>
+    <h2>2lazy2tag? Enter in a public image url and get tags that describe your photo. Hover over the tags to see the probability that the tag is valid.</h2>
     {% with messages = get_flashed_messages() %}
       {% if messages %}
         <ul>
@@ -30,5 +31,10 @@
       {% endif %}
     {% endwith %}
     {% block content %}{% endblock %}
+   <!--  
+    {% assets "js_all" %}
+      <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %} -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/validate.js') }}"></script>
   </body>
 </html>

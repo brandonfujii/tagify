@@ -9,7 +9,7 @@ $maincolor: #1A8BB3;
 }
 
 @mixin button() {
-	@include font($mainfont, 1.2em, 500, $maincolor);
+	@include font($mainfont, 1em, 500, $maincolor);
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	background: transparent;
@@ -60,37 +60,76 @@ body {
 		text-align: center;
 	}
 	h2 {
+		width: 90%;
 		max-width: 400px;
 		margin: 0 auto;
 		@include font($mainfont, 1em, 300, #555555);
 		line-height: 1.5em;
 	}
 	.container {
-		form {
+		form#imageform {
 			margin-top: 20px;
 			text-align: center;
 
 			input#imageurl {
+				display: inline-block;
 				padding: 20px;
 				height: 50px;
-				border: 0;
+				width: 90%;
+				max-width: 500px;
+				border: 1px solid #ccc;
+				border-radius: 3px;
+				margin-bottom: 10px;
+				-webkit-box-shadow: inset 3px 3px 25px -15px rgba(143,143,143,1);
+				-moz-box-shadow: inset 3px 3px 25px -15px rgba(143,143,143,1);
+				box-shadow: inset 3px 3px 25px -15px rgba(143,143,143,1);
+
+
 				
 				&:focus {
 					border: 1px solid $maincolor;
 					outline: none;
 				}
 			}
-			input[type="submit"] {
-				@include transition();
-				@include button();
+			.error-msg {
+				display: block;
+				@include font($mainfont, 1em, 400, red);
+				margin-bottom: 10px;
 			}
+
+			.option-container {
+				margin-top: 10px;
+				margin-bottom: 10px;
+
+				#submit {
+					display: inline-block;
+					margin: 0 auto;
+					@include button();
+				}
+
+				#clear {
+					margin-left: 10px;
+					display: inline-block;
+					@include button();
+					border-color: #FF544D;
+					color: #FF544D;
+
+					&:hover {
+						background: #FF544D;
+					}
+
+				}
+			}
+
 		}
 		.results {
+			display: none;
 			max-width: 400px;
 			margin: 30px auto;
 			border-radius: 3px;
 			border: 1px solid #f2f2f2;
 			overflow: hidden;
+			box-shadow: 0 2px 5px #ECECEC;
 
 			.image {
 
@@ -148,5 +187,11 @@ body {
 			}
 
 		}
+
+		.results.active {
+			display: block;
+		}
 	}
+}
+
 }

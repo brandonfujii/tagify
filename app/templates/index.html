@@ -1,13 +1,16 @@
 {% extends "layout.html" %}
 {% block content %}
 	<div class="container">
-	    <form action="" method="post" name="imageform">
+	    <form id="imageform" action="" method="post" name="imageform">
 	    	{{ form.hidden_tag() }}
-	    	<p>{{ form.imageurl(size=80) }}</p>
+	    	{{ form.imageurl }}
 	    	{% for error in form.imageurl.errors %}
-	        	<span style="color: red;">[{{ error }}]</span>
-	        {% endfor %}<br>
-	    	<p><input type="submit" value="Get Tags"></p>
+	        	<span class="error-msg">[{{ error }}]</span>
+	        {% endfor %}
+	        <div class="option-container row">
+		    	<input id="submit" type="submit" value="Get Tags">
+		    	<input id="clear" type="reset" value="Clear">
+		    </div>
 	    </form>
 	    <div class="results">
 		    <div class="image">
