@@ -1,2 +1,0 @@
-WTF_CSRF_ENABLED = True
-SECRET_KEY = 'hask129123lsmhh1'
