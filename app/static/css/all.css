@@ -48,56 +48,78 @@
             body .container form#imageform input#imageurl:focus {
               border: 1px solid #1A8BB3;
               outline: none; }
-          body .container form#imageform .error-msg {
-            display: block;
-            font-family: 'Proxima Nova', 'Helvetica', Arial, sans-serif;
-            font-size: 1em;
-            font-weight: 400;
-            color: red;
-            margin-bottom: 10px; }
-            body .container form#imageform .option-container {
-              margin-top: 10px;
-              margin-bottom: 10px; }
-              body .container form#imageform .option-container #submit {
-                display: inline-block;
-                margin: 0 auto;
-                font-family: 'Proxima Nova', 'Helvetica', Arial, sans-serif;
-                font-size: 1em;
-                font-weight: 500;
-                color: #1A8BB3;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                background: transparent;
-                border: 2px solid #1A8BB3;
-                padding: 7px 15px 5px 15px;
-                border-radius: 50px; }
-                body .container form#imageform .option-container #submit:focus {
-                  outline: none; }
-                  body .container form#imageform .option-container #submit:hover {
-                    background: #1A8BB3;
-                    color: #fff; }
-              body .container form#imageform .option-container #clear {
-                margin-left: 10px;
-                display: inline-block;
-                font-family: 'Proxima Nova', 'Helvetica', Arial, sans-serif;
-                font-size: 1em;
-                font-weight: 500;
-                color: #1A8BB3;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                background: transparent;
-                border: 2px solid #1A8BB3;
-                padding: 7px 15px 5px 15px;
-                border-radius: 50px;
-                border-color: #FF544D;
-                color: #FF544D; }
-                body .container form#imageform .option-container #clear:focus {
-                  outline: none; }
-                  body .container form#imageform .option-container #clear:hover {
-                    background: #1A8BB3;
-                    color: #fff; }
-                    body .container form#imageform .option-container #clear:hover {
-                      background: #FF544D; }
+          body .container form#imageform .inputfile {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1; }
+            body .container form#imageform .inputfile + label {
+              font-family: 'Proxima Nova', 'Helvetica', Arial, sans-serif;
+              font-size: 1em;
+              font-weight: 700;
+              color: #fff;
+              background-color: #1A8BB3;
+              padding: 5px 10px;
+              border-radius: 3px;
+              display: inline-block; }
+              body .container form#imageform .inputfile:focus + label,
+              body .container form#imageform .inputfile + label:hover {
+                background-color: #177a9d; }
+                body .container form#imageform .inputfile + label {
+                  cursor: pointer;
+                  cursor: hand; }
+                  body .container form#imageform .error-msg {
+                    display: block;
+                    font-family: 'Proxima Nova', 'Helvetica', Arial, sans-serif;
+                    font-size: 1em;
+                    font-weight: 400;
+                    color: red;
+                    margin-bottom: 10px; }
+                    body .container form#imageform .option-container {
+                      margin-top: 10px;
+                      margin-bottom: 10px; }
+                      body .container form#imageform .option-container #submit {
+                        display: inline-block;
+                        margin: 0 auto;
+                        font-family: 'Proxima Nova', 'Helvetica', Arial, sans-serif;
+                        font-size: 1em;
+                        font-weight: 500;
+                        color: #1A8BB3;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        background: transparent;
+                        border: 2px solid #1A8BB3;
+                        padding: 7px 15px 5px 15px;
+                        border-radius: 50px; }
+                        body .container form#imageform .option-container #submit:focus {
+                          outline: none; }
+                          body .container form#imageform .option-container #submit:hover {
+                            background: #1A8BB3;
+                            color: #fff; }
+                      body .container form#imageform .option-container #clear {
+                        margin-left: 10px;
+                        display: inline-block;
+                        font-family: 'Proxima Nova', 'Helvetica', Arial, sans-serif;
+                        font-size: 1em;
+                        font-weight: 500;
+                        color: #1A8BB3;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        background: transparent;
+                        border: 2px solid #1A8BB3;
+                        padding: 7px 15px 5px 15px;
+                        border-radius: 50px;
+                        border-color: #FF544D;
+                        color: #FF544D; }
+                        body .container form#imageform .option-container #clear:focus {
+                          outline: none; }
+                          body .container form#imageform .option-container #clear:hover {
+                            background: #1A8BB3;
+                            color: #fff; }
+                            body .container form#imageform .option-container #clear:hover {
+                              background: #FF544D; }
         body .container .results {
           display: none;
           max-width: 400px;

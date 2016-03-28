@@ -7,7 +7,7 @@ import operator
 
 clarifai_api = ClarifaiApi() # assumes environment variables are set.
 
-def get_tags(img_url):
+def get_tags_from_url(img_url):
 	result = clarifai_api.tag_image_urls(img_url)
 	tag_dict = generate_dict(convert_from_unicode(result))
 	return get_tuples_from_dict(tag_dict)

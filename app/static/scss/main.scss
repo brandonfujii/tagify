@@ -91,6 +91,32 @@ body {
 					outline: none;
 				}
 			}
+
+			.inputfile {
+				width: 0.1px;
+				height: 0.1px;
+				opacity: 0;
+				overflow: hidden;
+				position: absolute;
+				z-index: -1;
+			}
+
+			.inputfile + label {
+				@include font($mainfont, 1em, 700, #fff);
+			    background-color: $maincolor;
+			    padding: 5px 10px;
+			    border-radius: 3px;
+			    display: inline-block;
+			}
+
+			.inputfile:focus + label,
+			.inputfile + label:hover {
+			    background-color: darken($maincolor, 5%);
+			}
+			.inputfile + label {
+				cursor: pointer;
+				cursor: hand;
+			}
 			.error-msg {
 				display: block;
 				@include font($mainfont, 1em, 400, red);
